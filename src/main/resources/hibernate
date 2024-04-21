@@ -1,0 +1,12 @@
+#Propiedades generales del proyecto de Spring
+db.connection.url=jdbc:postgresql://godzilla.guanatec.com.sv:5432/sage_mini_maxfoto_db
+db.dialect=org.hibernate.dialect.PostgreSQLDialect
+db.connection.username=sage_mini_maxfoto
+db.connection.password=3v0A:,$+Zj8%*R7fTP3m+95u^
+db.generateDdl=false
+db.driver=org.postgresql.Driver
+db.show_sql=true
+db.hibernate.lazy.load=true
+
+# Propiedades de actualizacion de tablas. Cambiar a 'update' en el primer inicio y luego permanentemente en 'none'
+db.hibernate.hbm2ddl.auto=none
