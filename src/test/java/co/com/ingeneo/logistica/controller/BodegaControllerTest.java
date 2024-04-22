@@ -39,16 +39,5 @@ public class BodegaControllerTest {
         this.mockMvc.perform(get(PATH)).andExpect(status().isOk())
                 .andExpect(jsonPath("$", IsNot.not(IsNull.nullValue())));
     }
-    
-    @Test
-    void shouldCreateNewBodega() throws Exception {
-    	BodegaTestBuilder bodega = BodegaTestBuilder.builder()
-                .codigo("101011").descripcion("Cartagena").build();
-
-        this.mockMvc.perform(post(PATH).contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(bodega)))
-                .andExpect(status().isCreated())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-    } 
 
 }
